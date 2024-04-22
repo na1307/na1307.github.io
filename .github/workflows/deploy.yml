@@ -35,7 +35,7 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --no-restore -c Release
-      - name: publish
+      - name: Publish
         run: dotnet publish --no-build -c Release -o _out
       - name: Setup Pages
         uses: actions/configure-pages@v5
