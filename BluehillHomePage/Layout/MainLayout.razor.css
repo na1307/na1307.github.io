@@ -33,7 +33,6 @@ main {
 }
 
 .content {
-    width: 960px;
     margin: auto;
 }
 
@@ -67,5 +66,11 @@ main {
     .top-row, article {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
+    }
+}
+
+@media (min-width: 960px) {
+    .content {
+        width: 960px;
     }
 }
