@@ -1,0 +1,25 @@
+﻿@using System.Timers
+@page "/time"
+@implements IDisposable
+
+<PageTitle>When is my time?</PageTitle>
+
+<h1>My Time</h1>
+
+<p>The time in <code>Asia/Seoul</code> where Bluehill lives is ...</p>
+<p><span class="d-flex justify-content-center" style="font-size: 36pt;">@time.ToString("yyyy-MM-dd HH:mm:ss")</span></p>
+
+@code {
+    private static readonly TimeZoneInfo zone = TimeZoneInfo.FindSystemTimeZoneById("Asia/Seoul");
+    private readonly PeriodicTimer timer = new(TimeSpan.FromSeconds(1));
+    private DateTime time = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, zone);
+
+    protected override async void OnInitialized() {
+        while (await timer.WaitForNextTickAsync()) {
+            time = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, zone);
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    public void Dispose() => timer.Dispose();
+}
