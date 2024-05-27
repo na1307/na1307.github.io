@@ -1,14 +1,8 @@
-﻿@inherits LayoutComponentBase
-<div class="page">
-    <main>
-        <div class="top-row px-4">
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="projects">Projects</NavLink>
-            <NavLink href="nugets">NuGets</NavLink>
-        </div>
+﻿@using Bluehill.Blazor.Layout
+@inherits LayoutComponentBase
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+<BluehillLayout HeadLinks="@([new("Home", "."), new("Projects", "projects"), new("NuGets", "nugets")])">
+    <Body>
+        @Body
+    </Body>
+</BluehillLayout>
