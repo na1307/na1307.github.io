@@ -1,8 +1,4 @@
 ﻿@using Bluehill.Blazor.Layout
 @inherits LayoutComponentBase
 
-<BluehillLayout HeadLinks="@([new("Home", "."), new("Projects", "projects"), new("NuGets", "nugets")])">
-    <Body>
-        @Body
-    </Body>
-</BluehillLayout>
+<TopRowBluehillLayout HeadLinks="@([new("Home", "."), new("Projects", "projects"), new("NuGets", "nugets")])" Body="@Body"/>
