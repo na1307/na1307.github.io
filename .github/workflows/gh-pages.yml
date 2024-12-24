@@ -40,11 +40,10 @@ jobs:
           key: ${{ runner.os }}-nuget-${{ hashFiles('Directory.Packages.props') }} #hash of project files
           restore-keys: ${{ runner.os }}-nuget-
       - name: Prepare Blazor WASM for GitHub Pages
-        uses: na1307/blazor-github-pages@v2
+        uses: na1307/blazor-github-pages@c748d25cebd890164e254aa18552c2d40bc58ba0
         id: prepare
         with:
           project-path: BluehillHomePage/BluehillHomePage.csproj
-          main-repo: true
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

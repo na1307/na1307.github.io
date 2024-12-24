@@ -8,13 +8,12 @@
         "resolved": "0.8.1",
         "contentHash": "UlaWDS0MH66tq0vcje85eG5HBEHPoQ4vYeg+by54j4/dEYRaIYl5wpVnXoMUCYuCrH7Oe/hwC1aueo98PztHOw=="
       },
-      "Bluehill.Blazor.GHPage": {
+      "Bluehill.Blazor.GHPages": {
         "type": "Direct",
-        "requested": "[0.8.1, )",
-        "resolved": "0.8.1",
-        "contentHash": "LJatDiTSpBMHlKdG05CCCumPTVHAwg9q2o1lEBZ2lqBGPsH7tqMvMggPwtBVT/cP0auLae9Lo+LjAphfNWPykw==",
+        "requested": "[1.0.0, )",
+        "resolved": "1.0.0",
+        "contentHash": "fo2Dnh/nGDDSAElVpZJIsWEiB0zbgdygnx+Vq5bUD378BgP9zKdjoMBwyfTPnf5Hto69IdBowlrniMEn6yMTrg==",
         "dependencies": {
-          "Microsoft.AspNetCore.Components.Web": "8.0.11",
           "Microsoft.AspNetCore.Components.WebAssembly": "8.0.11"
         }
       },
