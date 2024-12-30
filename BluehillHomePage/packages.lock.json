@@ -10,9 +10,9 @@
       },
       "Bluehill.Blazor.GHPages": {
         "type": "Direct",
-        "requested": "[1.0.0, )",
-        "resolved": "1.0.0",
-        "contentHash": "fo2Dnh/nGDDSAElVpZJIsWEiB0zbgdygnx+Vq5bUD378BgP9zKdjoMBwyfTPnf5Hto69IdBowlrniMEn6yMTrg==",
+        "requested": "[1.0.1, )",
+        "resolved": "1.0.1",
+        "contentHash": "njViK2Unpj0WpcmnNSI5AmrBDh+tZIyN7SCdLFucMUaSziwepSpPelD/t6kHX8z3A90ZKZOn7WN3RiGq4s2/7g==",
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebAssembly": "8.0.11"
         }
