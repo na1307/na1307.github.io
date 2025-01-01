@@ -1,10 +1,9 @@
 ﻿using BluehillHomePage.Pages;
 using Bunit;
-using TestContext = Bunit.TestContext;
 
 namespace BluehillHomePage.Tests;
 
-public sealed class TimeTest : TestContext {
+public sealed class TimeTest : Bunit.TestContext {
     private static readonly SeoulTimeProvider stp = new();
 
     [Fact]
@@ -15,7 +14,7 @@ public sealed class TimeTest : TestContext {
         // Act
         var initialDt = stp.GetLocalNow();
         var initialTime = cut.FindAll("span.d-flex.justify-content-center")[1].InnerHtml;
-        await Task.Delay(2000); // Wait for 2 seconds to allow time to update
+        await Task.Delay(2000, Xunit.TestContext.Current.CancellationToken); // Wait for 2 seconds to allow time to update
         cut.Render(); // Re-render the component
         var updatedDt = stp.GetLocalNow();
         var updatedTime = cut.FindAll("span.d-flex.justify-content-center")[1].InnerHtml;
