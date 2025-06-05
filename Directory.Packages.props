@@ -8,13 +8,13 @@
     <PackageVersion Include="Bluehill.Blazor" Version="0.9.0" />
     <PackageVersion Include="Bluehill.Blazor.GHPages" Version="1.0.2" />
     <PackageVersion Include="bunit" Version="1.39.5" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.4" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.4" />
-    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.5" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.5" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.0" />
     <PackageVersion Include="xunit.v3" Version="2.0.2" />
   </ItemGroup>
   <ItemGroup>
-    <GlobalPackageReference Include="Bluehill.Imports" Version="1.0.15" />
+    <GlobalPackageReference Include="Bluehill.Imports" Version="1.0.16" />
   </ItemGroup>
 </Project>
