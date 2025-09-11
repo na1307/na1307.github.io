@@ -17,16 +17,16 @@
     private static readonly SeoulTimeProvider stp = new();
     private readonly PeriodicTimer timer = new(TimeSpan.FromSeconds(1));
 
-    protected override async void OnInitialized() => await update();
+    public void Dispose() => timer.Dispose();
+    
+    protected override async Task OnInitializedAsync() => await update();
 
     private async Task update() {
         while (await timer.WaitForNextTickAsync()) {
             await InvokeAsync(StateHasChanged);
         }
     }
-
-    public void Dispose() => timer.Dispose();
-
+    
     private sealed class SeoulTimeProvider : TimeProvider {
         public override TimeZoneInfo LocalTimeZone => TimeZoneInfo.FindSystemTimeZoneById(asiaSeoul);
     }
