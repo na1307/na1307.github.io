@@ -42,6 +42,8 @@ jobs:
           echo "command=install" >> $GITHUB_OUTPUT
           echo "runner=pnpm" >> $GITHUB_OUTPUT
           echo "lockfile=pnpm-lock.yaml" >> $GITHUB_OUTPUT
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
       - name: Setup Node
         uses: actions/setup-node@v5
         with:
