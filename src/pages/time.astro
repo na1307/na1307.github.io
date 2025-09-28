@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <h1>My Time</h1>
+    <p>The time in <code>Asia/Seoul</code> where Bluehill lives is ...</p>
+    <div id="clock-display" class="text-center"></div>
+</Layout>
+
+<script>
+    const cd = document.getElementById("clock-display")
+
+    function updateClock(): void {
+        if (cd === null) {
+            throw new Error('Something went wrong.')
+        }
+
+        cd.textContent = new Date().toLocaleString(undefined, {timeZone: 'Asia/Seoul'})
+    }
+
+    setInterval(updateClock, 1000)
+    updateClock()
+</script>
+
+<style>
+    div#clock-display {
+        font-size: 36pt;
+    }
+</style>
