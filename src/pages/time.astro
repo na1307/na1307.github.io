@@ -8,6 +8,12 @@ import Layout from "../layouts/Layout.astro";
     <div id="clock-display" class="text-center"></div>
 </Layout>
 
+<style>
+    div#clock-display {
+        font-size: 36pt;
+    }
+</style>
+
 <script>
     const cd = document.getElementById("clock-display")
 
@@ -22,9 +28,3 @@ import Layout from "../layouts/Layout.astro";
     setInterval(updateClock, 1000)
     updateClock()
 </script>
-
-<style>
-    div#clock-display {
-        font-size: 36pt;
-    }
-</style>

@@ -1,8 +1,10 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+
 a {
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
-    text-underline-offset: 0.25em
+    text-underline-offset: 0.25em;
 }
