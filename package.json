@@ -2,7 +2,7 @@
   "name": "bluehill-homepage",
   "type": "module",
   "version": "1.0",
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.18.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
