@@ -1,0 +1,21 @@
+{
+  "name": "bluehill-pages",
+  "private": true,
+  "type": "module",
+  "version": "1.0",
+  "packageManager": "pnpm@10.18.3",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
+    "@popperjs/core": "^2.11.8",
+    "@types/bootstrap": "^5.2.10",
+    "astro": "^5.14.7",
+    "astro-bootstrap": "^0.7.2",
+    "bootstrap": "^5.3.8"
+  }
+}

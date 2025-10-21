@@ -1,0 +1,34 @@
+---
+import {type Language, loc as locobj} from "../loc.ts"
+
+const {locale} = Astro.props
+const loc = locobj[locale as Language].about
+---
+
+<h1>About me</h1>
+
+<h2>{loc.introduction}</h2>
+<ul>
+    <li>{loc.iam}</li>
+    <li>{loc.interest}</li>
+    <li>{loc.minimalism}</li>
+    <li>{loc.technical}</li>
+    <li>{loc.empty}</li>
+</ul>
+
+<h2>{loc.useless}</h2>
+<ul>
+    <li>
+        {loc.iamnot}
+        <del>{loc.absolutelynot}</del>
+    </li>
+    <li>
+        {loc.namehavenomean}
+        <ul>
+            <li>{loc.nickorigin}</li>
+        </ul>
+    </li>
+    <li><Fragment set:html={loc.profilepic.replace('$1', `<a href="https://www.pixiv.net/artworks/100567053">${loc.here}</a>`)} /></li>
+    <li>{loc.dislikeconcepts}</li>
+    <li>{loc.disliketwitter}</li>
+</ul>

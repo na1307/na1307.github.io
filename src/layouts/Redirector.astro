@@ -1,0 +1,29 @@
+---
+import {getRelativeLocaleUrl} from "astro:i18n";
+
+const {to} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>Redirecting...</title>
+</head>
+<body>
+<redir-ector data-to={to}>
+    <p>If you are not redirected, click <a href={getRelativeLocaleUrl('en', to)}>here.</a></p>
+</redir-ector>
+</body>
+</html>
+
+<script>
+    class R extends HTMLElement {
+        connectedCallback(): void {
+            location.replace(`/${navigator.languages.includes('ko') ? 'ko' : 'en'}${this.dataset.to}`)
+        }
+    }
+
+    customElements.define('redir-ector', R)
+</script>

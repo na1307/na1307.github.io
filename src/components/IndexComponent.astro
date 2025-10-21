@@ -1,0 +1,17 @@
+---
+import {type Language, loc as locobj} from "../loc.ts"
+import {getRelativeLocaleUrl} from 'astro:i18n';
+
+const {locale} = Astro.props
+const loc = locobj[locale as Language].index
+---
+
+<h1>Bluehill / Jonghyo Lee</h1>
+<p>{loc.welcome}</p>
+<ul>
+    <li><a href={getRelativeLocaleUrl(locale, '/about')}>About me</a></li>
+    <li><a href={getRelativeLocaleUrl(locale, '/projects')}>My projects</a></li>
+    <li><a href="https://nuget.bluehill.dev">NuGet packages</a></li>
+    <li><a href={getRelativeLocaleUrl(locale, '/time')}>{loc.when}</a></li>
+    <li><a href="https://blog.naver.com/na1307-">{loc.blog}</a></li>
+</ul>

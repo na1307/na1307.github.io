@@ -1,0 +1,31 @@
+---
+import {type Language, loc as locobj} from "../loc.ts"
+
+const {locale} = Astro.props
+const loc = locobj[locale as Language].time
+---
+
+<h1>{loc.mytime}</h1>
+<p><Fragment set:html={loc.mytimeis.replace('$1', `<code>Asia/Seoul</code>`)} /></p>
+<div id="clock-display" class="text-center"></div>
+
+<script>
+    const cd = document.getElementById('clock-display')
+
+    function updateClock(): void {
+        if (cd === null) {
+            throw new Error('Something went wrong.')
+        }
+
+        cd.textContent = new Date().toLocaleString(undefined, {timeZone: 'Asia/Seoul'})
+    }
+
+    setInterval(updateClock, 1000)
+    updateClock()
+</script>
+
+<style>
+    div#clock-display {
+        font-size: 36pt;
+    }
+</style>
