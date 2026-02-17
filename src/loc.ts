@@ -18,7 +18,6 @@ export interface AboutLocalization {
     readonly absolutelynot: string
     readonly namehavenomean: string
     readonly nickorigin: string
-    readonly profilepic: string
     readonly here: string
     readonly dislikeconcepts: string
     readonly disliketwitter: string
@@ -58,7 +57,6 @@ export const loc: Localization = {
             absolutelynot: "Absolutely not",
             namehavenomean: "My nickname (Bluehill) and ID (na1307) have no particular meaning.",
             nickorigin: "I've been using the nickname Bluehill since 2018, and I suspect it might have been a parody of Bluehole (now Krafton) back when PUBG was popular.",
-            profilepic: "My profile picture is a character named Shii from the game 'Sixtar Gate: STARTRAIL'. The original image is $1.",
             here: "here",
             dislikeconcepts: "I dislike people who adopt strange concepts. Can't we just live a normal life?",
             disliketwitter: "I don't use Twitter (X) and don't intend to. Because Grandfather Ferguson said it was a waste of life."
@@ -86,7 +84,6 @@ export const loc: Localization = {
             absolutelynot: "암튼 아님",
             namehavenomean: "닉네임(Bluehill)과 아이디(na1307)의 의미는 없습니다.",
             nickorigin: "Bluehill이라는 닉네임은 2018년부터 썼는데, 아마도 당시 배틀그라운드가 유행하던 때에 블루홀(현 크래프톤) 패러디로 쓰지 않았나 싶습니다.",
-            profilepic: "프사는 '식스타 게이트: 스타트레일'이라는 게임에 나오는 시이라는 캐릭터입니다. 이미지의 원본은 $1입니다.",
             here: "여기",
             dislikeconcepts: "이상한 컨셉 잡는 사람들을 싫어합니다. 우리 평범하게 살 수 있잖아요?",
             disliketwitter: "트위터(X)는 하지 않고, 할 생각도 없습니다. 퍼거슨 할아버지께서 인생의 낭비라 하셨거든요."
