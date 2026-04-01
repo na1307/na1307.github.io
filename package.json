@@ -22,10 +22,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.1",
+    "@astrojs/sitemap": "^3.7.2",
     "@popperjs/core": "^2.11.8",
     "@types/bootstrap": "^5.2.10",
-    "astro": "^6.0.3",
+    "astro": "^6.1.2",
     "astro-bootstrap": "^0.7.2",
     "bootstrap": "^5.3.8"
   }
