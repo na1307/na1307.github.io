@@ -8,6 +8,8 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -39,7 +41,7 @@ jobs:
         id: detect-package-manager
         run: |
           echo "manager=pnpm" >> $GITHUB_OUTPUT
-          echo "command=install" >> $GITHUB_OUTPUT
+          echo "command=ci" >> $GITHUB_OUTPUT
           echo "runner=pnpm" >> $GITHUB_OUTPUT
           echo "lockfile=pnpm-lock.yaml" >> $GITHUB_OUTPUT
       - name: Setup pnpm
@@ -51,6 +53,7 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/${{ steps.detect-package-manager.outputs.lockfile }}
       - name: Setup Pages
+        if: github.event_name == 'push'
         id: pages
         uses: actions/configure-pages@v5
       - name: Install dependencies
@@ -63,6 +66,7 @@ jobs:
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
+        if: github.event_name == 'push'
         uses: actions/upload-pages-artifact@v4
         with:
           path: ${{ env.BUILD_PATH }}/dist
@@ -74,6 +78,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     name: Deploy
+    if: github.event_name == 'push'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
