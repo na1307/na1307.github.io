@@ -15,7 +15,7 @@ importers:
         specifier: 2.11.8
         version: 2.11.8
       '@types/bootstrap':
-        specifier: ^5.2.11
+        specifier: 5.2.11
         version: 5.2.11
       astro:
         specifier: 7.1.6
