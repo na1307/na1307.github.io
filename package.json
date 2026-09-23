@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/na1307/na1307.github.io/issues"
   },
-  "packageManager": "pnpm@12.3.4",
+  "packageManager": "pnpm@12.6.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
